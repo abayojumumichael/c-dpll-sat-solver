@@ -10,11 +10,7 @@ Clause new_Clause() {
 }
 
 bool addLiteral(Clause* this, int literal) {
-    if (this == NULL) {
-        return false;
-    }
-
-    if (literal == 0) {
+    if (this == NULL || literal == 0) {
         return false;
     }
 
@@ -65,15 +61,10 @@ bool removeLiteral(Clause* this, int literal) {
     
     this->size = write;
     return removed;    
-
 }
 
 bool containsLiteral(Clause* this, int literal) {
-    if (this == NULL) {
-        return false;
-    }
-
-    if (literal == 0) {
+    if (this == NULL || literal == 0) {
         return false;
     }
 
