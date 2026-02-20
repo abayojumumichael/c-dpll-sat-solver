@@ -84,7 +84,8 @@ bool containsEmptyClause(ClauseSet* this);
 /*
  * Attempts to find a unit clause in the given ClauseSet and return its index
  * @param this a pointer to the ClauseSet to search
- * @return the index of a unit clause (if one exists in the given ClauseSet)
+ * @return the index of a unit clause, or -1 if none exists
+
  */
 int findUnitClause(ClauseSet* this);
 
