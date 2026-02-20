@@ -10,3 +10,20 @@ Clause new_Clause() {
     return clause;
 }
 
+bool addLiteral(Clause* this, int literal) {
+    if (this == NULL) {
+        return false;
+    }
+
+    if (literal == 0) {
+        return false;
+    }
+
+    if (this->size >= MAX_LITERALS) {
+        return false;
+    }
+
+    this->literals[this->size++] = literal;
+    return true;
+}
+
