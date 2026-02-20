@@ -15,7 +15,7 @@
 
 typedef struct ClauseSet ClauseSet;
 
-/* Define ClauseSet struct*/
+/* Defines ClauseSet struct*/
 struct ClauseSet {
     Clause clauses[MAX_CLAUSES];
     int size;
