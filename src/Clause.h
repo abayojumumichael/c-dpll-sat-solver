@@ -15,8 +15,10 @@
 
 typedef struct Clause Clause;
 
-/*TODO: Define the Clause struct*/
+/* Defines the Clause struct*/
 struct Clause {
+    int literals[MAX_LITERALS];
+    int size;
 };
 
 
