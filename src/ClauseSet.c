@@ -4,8 +4,6 @@
 
 #include "ClauseSet.h"
 
-// TODO: Implement all the the functions declared in the ClauseSet.h interface
-
 ClauseSet new_ClauseSet() {
     ClauseSet clauseSet = {.size = 0};
     return clauseSet;
