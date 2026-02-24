@@ -1,0 +1,8 @@
+c  example1.cnf
+c
+c Answer after one round of unit propagation: one clause, 2 4 3
+c Problem is solvable.
+p cnf 5 3
+1 0
+1 -3 0
+2 4 3 -1 0
