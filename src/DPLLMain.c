@@ -21,17 +21,27 @@
  *   A valid DIMACS filename is provided in argv[1].
  */
 int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Input Error\n");
+        return 0;
+    }
+    
     char* filename = argv[1];
     DIMACS file = DIMACS_open(filename);
     ClauseSet cnf = new_ClauseSet();
-    DIMACS_readClauses(&file, &cnf);
+
+    if (!DIMACS_readClauses(&file, &cnf)) {
+        DIMACS_close(&file);
+        printf("Input Error\n");
+        return 0;
+    }
+
     if (DPLL(&cnf)) {
-        printf("true");
+        printf("true\n");
     }
     else {
-        printf("false");
+        printf("false\n");
     }
 
     return 0;
 }
-
