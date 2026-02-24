@@ -18,6 +18,10 @@ bool addLiteral(Clause* this, int literal) {
         return false;
     }
 
+    if (literal < -MAX_LITERALS || literal > MAX_LITERALS) {
+        return false;
+    }
+
     this->literals[this->size++] = literal;
     return true;
 }
